@@ -7,8 +7,6 @@
     height: 900px;
     border: 1px solid black;
     flex-grow: 1;
-    gap: 0;
-    margin: 0;
 }
 
 .row {
@@ -16,8 +14,6 @@
     width: 100%;
     flex-grow: 1;
     border: 1px solid black;
-    gap: 0;
-    margin: 0;
 }
 
 .square {
