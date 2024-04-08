@@ -4,6 +4,9 @@ let container = document.querySelector('.container');
 let gridBtn = document.querySelector('.grid-creation');
 
 function createGrid(){
+    while (container.firstChild){
+        container.removeChild(container.lastChild)
+    }
     let num = Number(prompt('tasdgsdg'));
     if (num > 100){
         return alert("The grid can't be bigger than 100");   
@@ -22,4 +25,3 @@ function createGrid(){
 
 gridBtn.addEventListener('click', createGrid);
 
-// createGrid();
