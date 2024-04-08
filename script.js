@@ -17,7 +17,7 @@ function createGrid(){
         for(let j = 0; j < num; j++){
             const square = document.createElement('div');
             square.classList.add('square');
-            square.style.height = `${900 / row}px`;
+            square.style.height = `${600 / row}px`;
             row.appendChild(square);
             };
         };
