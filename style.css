@@ -2,13 +2,27 @@
 .container {
     display: flex;
     box-sizing: border-box;
+    flex-wrap: wrap;
     width: 900px;
     height: 900px;
     border: 1px solid black;
+    flex-grow: 1;
+    gap: 0;
+    margin: 0;
 }
 
 .row {
     display: flex;
     width: 100%;
+    flex-grow: 1;
     border: 1px solid black;
+    gap: 0;
+    margin: 0;
+}
+
+.square {
+    width: 25px;
+    /* height: 25px; */
+    border: 1px solid black;
+    
 }
