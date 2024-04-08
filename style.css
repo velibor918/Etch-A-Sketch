@@ -1,4 +1,11 @@
 
+.menu {
+    display: flex;
+    /* flex-grow: 0; */
+    gap: 25px;
+}
+
+
 .container {
     display: flex;
     box-sizing: border-box;
@@ -6,7 +13,7 @@
     width: 900px;
     height: 900px;
     border: 1px solid black;
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }
 
 .row {
@@ -21,3 +28,5 @@
     border: 1px solid black;
     
 }
+
+
