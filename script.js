@@ -33,6 +33,6 @@ function changeColor () {
             child.style.backgroundColor = 'blue';
         }
      )}
-    )}
+    )};
 
 document.querySelector('.test').addEventListener ('click', changeColor);
