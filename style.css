@@ -1,7 +1,6 @@
 
 .menu {
     display: flex;
-    /* flex-grow: 0; */
     gap: 25px;
 }
 
@@ -13,7 +12,6 @@
     width: 600px;
     height: 600px;
     border: 1px solid black;
-    /* flex-grow: 1; */
 }
 
 .row {
