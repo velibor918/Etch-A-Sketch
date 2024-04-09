@@ -9,7 +9,7 @@ function createGrid(){
     }
     let num = Number(prompt('tasdgsdg'));
     if (num > 100){
-        return alert("The grid can't be bigger than 100");   
+        return alert("The grid can't be bigger than 100.");   
     };
         for(let i = 0; i < num; i++){
             const row = container.appendChild(document.createElement('div'));
@@ -25,3 +25,14 @@ function createGrid(){
 
 gridBtn.addEventListener('click', createGrid);
 
+function changeColor () {
+    let children = document.querySelectorAll('.square');
+
+    children.forEach((child) => {
+        child.addEventListener('mouseenter', () => {
+            child.style.backgroundColor = 'blue';
+        }
+     )}
+    )}
+
+document.querySelector('.test').addEventListener ('click', changeColor);
