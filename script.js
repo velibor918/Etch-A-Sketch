@@ -35,4 +35,6 @@ function changeColor () {
      )}
     )};
 
-document.querySelector('.test1').addEventListener ('click', changeColor);
+let colorBtn = document.querySelector('.change-color');
+
+colorBtn.addEventListener ('click', changeColor);
