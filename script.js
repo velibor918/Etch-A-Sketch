@@ -55,5 +55,15 @@ function erase () {
 
 eraseBtn.addEventListener('click', erase);
 
-let clearAll = document.querySelector('.clear-all');
+let clearBtn = document.querySelector('.clear-all');
+
+function clear () {
+    let children = document.querySelectorAll('.square');
+
+    children.forEach((child) => {
+        child.style.backgroundColor = `white`;
+    } );
+};
+
+clearBtn.addEventListener('click', clear);
 
