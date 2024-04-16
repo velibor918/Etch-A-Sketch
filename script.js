@@ -41,7 +41,7 @@ let colorBtn = document.querySelector('.change-color');
 
 colorBtn.addEventListener ('click', changeColor);
 
-let eraser = document.querySelector('.eraser');
+let eraseBtn = document.querySelector('.eraser');
 
 function erase () {
     let children = document.querySelectorAll('.square');
@@ -53,4 +53,7 @@ function erase () {
      )}
     )};
 
-eraser.addEventListener('click', erase);
+eraseBtn.addEventListener('click', erase);
+
+let clearAll = document.querySelector('.clear-all');
+
