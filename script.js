@@ -67,3 +67,19 @@ function clear () {
 
 clearBtn.addEventListener('click', clear);
 
+let randomBtn = document.querySelector('.random-color');
+
+function randomColor () {
+    let children = document.querySelectorAll('.square');
+
+    children.forEach((child) => {
+        child.addEventListener('mouseenter', () => {
+            child.style.backgroundColor = `rgb(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)})`;
+        })
+    } );
+};
+
+randomBtn.addEventListener('click', randomColor);
+
+
+
