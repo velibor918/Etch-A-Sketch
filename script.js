@@ -25,12 +25,14 @@ function createGrid(){
 
 gridBtn.addEventListener('click', createGrid);
 
+let colorChoice = document.querySelector('#color-picker');
+
 function changeColor () {
     let children = document.querySelectorAll('.square');
 
     children.forEach((child) => {
         child.addEventListener('mouseenter', () => {
-            child.style.backgroundColor = 'blue';
+            child.style.backgroundColor = `${colorChoice.value}`;
         }
      )}
     )};
