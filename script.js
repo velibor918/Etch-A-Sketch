@@ -40,3 +40,17 @@ function changeColor () {
 let colorBtn = document.querySelector('.change-color');
 
 colorBtn.addEventListener ('click', changeColor);
+
+let eraser = document.querySelector('.eraser');
+
+function erase () {
+    let children = document.querySelectorAll('.square');
+
+    children.forEach((child) => {
+        child.addEventListener('mouseenter', () => {
+            child.style.backgroundColor = `white`;
+        }
+     )}
+    )};
+
+eraser.addEventListener('click', erase);
