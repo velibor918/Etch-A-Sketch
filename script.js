@@ -7,7 +7,7 @@ function createGrid(){
     while (container.firstChild){
         container.removeChild(container.lastChild)
     }
-    let num = Number(prompt('tasdgsdg'));
+    let num = Number(prompt('Create a Grid.'));
     if (num > 100){
         return alert("The grid can't be bigger than 100.");   
     };
