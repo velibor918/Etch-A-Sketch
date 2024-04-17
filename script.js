@@ -85,5 +85,21 @@ function randomColor() {
 
 randomBtn.addEventListener('click', randomColor);
 
+let gradientBtn = document.querySelector('.gradient');
+
+function gradientColor () {
+    let children = document.querySelectorAll('.square');
+
+    children.forEach((child) => {
+        child.addEventListener('mouseenter', () => {
+            child.style.backgroundColor = `${child.style.backgroundColor.value}`;
+            child.style.filter = `brightness(${-10})`;
+        }
+        )
+    }
+    )
+};
+
+gradientBtn.addEventListener('click', gradientColor);
 
 
