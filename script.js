@@ -27,17 +27,21 @@ gridBtn.addEventListener('click', createGrid);
 
 let colorChoice = document.querySelector('#color-picker');
 
+function changeColorInner (event) {
+    event.target.style.backgroundColor = `${colorChoice.value}`
+}
+
 function changeColor() {
     let children = document.querySelectorAll('.square');
 
     children.forEach((child) => {
-        child.addEventListener('mouseenter', () => {
-            child.style.backgroundColor = `${colorChoice.value}`;
+        child.addEventListener('mouseenter', changeColorInner);
         }
         )
-    }
-    )
-};
+}
+
+
+
 
 let colorBtn = document.querySelector('.change-color');
 
@@ -92,8 +96,9 @@ function gradientColor () {
 
     children.forEach((child) => {
         child.addEventListener('mouseenter', () => {
-            child.style.backgroundColor = `${child.style.backgroundColor.value}`;
-            child.style.filter = `brightness(${-10})`;
+            child.style.backgroundColor = child.style.backgroundColor;
+            let val = child.style.filter = `brightness(100%)`;
+            child.style.filter = `brightness(${val - 10}%)`;
         }
         )
     }
