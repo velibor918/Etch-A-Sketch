@@ -24,6 +24,7 @@
 .square {
     width: 100%;
     border: 1px solid black;
+    filter: brightness(100%);
     
 }
 
