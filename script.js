@@ -36,6 +36,7 @@ function changeColor() {
 
     children.forEach((child) => {
         child.removeEventListener('mouseenter', eraseInner);
+        child.removeEventListener('mouseenter', gradientColorInner);
         child.removeEventListener('mouseenter', randomColorInner);
         child.addEventListener('mouseenter', changeColorInner);
         }
@@ -57,6 +58,7 @@ function erase() {
 
     children.forEach((child) => {
         child.removeEventListener('mouseenter', changeColorInner);
+        child.removeEventListener('mouseenter', gradientColorInner);
         child.removeEventListener('mouseenter', randomColorInner);
         child.addEventListener('mouseenter', eraseInner)
     }
@@ -88,6 +90,7 @@ function randomColor() {
 
     children.forEach((child) => {
         child.removeEventListener('mouseenter', changeColorInner);
+        child.removeEventListener('mouseenter', gradientColorInner);
         child.removeEventListener('mouseenter', eraseInner);
         child.addEventListener('mouseenter', randomColorInner)
     });
@@ -98,8 +101,8 @@ randomBtn.addEventListener('click', randomColor);
 let gradientBtn = document.querySelector('.gradient');
 
 function gradientColorInner(event) {
-    let brightVal = window.getComputedStyle(event.target).getPropertyValue("fitler:brightness()");
-    event.target.filter = `brightness(${brightVal - 10}%)`
+    let brightVal = window.getComputedStyle(event.target).getPropertyValue("filter:brightness()");
+    event.target.style.filter = `brightness(${brightVal - 10}%)`
 }
 
 function gradientColor () {
