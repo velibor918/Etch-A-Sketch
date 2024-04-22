@@ -35,6 +35,8 @@ function changeColor() {
     let children = document.querySelectorAll('.square');
 
     children.forEach((child) => {
+        child.removeEventListener('mouseenter', eraseInner);
+        child.removeEventListener('mouseenter', randomColorInner);
         child.addEventListener('mouseenter', changeColorInner);
         }
         )
@@ -54,6 +56,8 @@ function erase() {
     let children = document.querySelectorAll('.square');
 
     children.forEach((child) => {
+        child.removeEventListener('mouseenter', changeColorInner);
+        child.removeEventListener('mouseenter', randomColorInner);
         child.addEventListener('mouseenter', eraseInner)
     }
     );
@@ -83,6 +87,8 @@ function randomColor() {
     let children = document.querySelectorAll('.square');
 
     children.forEach((child) => {
+        child.removeEventListener('mouseenter', changeColorInner);
+        child.removeEventListener('mouseenter', eraseInner);
         child.addEventListener('mouseenter', randomColorInner)
     });
 };
@@ -91,19 +97,19 @@ randomBtn.addEventListener('click', randomColor);
 
 let gradientBtn = document.querySelector('.gradient');
 
-function gradientColor () {
-    let children = document.querySelectorAll('.square');
+// function gradientColor () {
+//     let children = document.querySelectorAll('.square');
 
-    children.forEach((child) => {
-        child.addEventListener('mouseenter', () => {
-            child.style.backgroundColor = child.style.backgroundColor;
-            let val = child.style.filter = `brightness(100%)`;
-            child.style.filter = `brightness(${val - 10}%)`;
-        }
-        )
-    }
-    )
-};
+//     children.forEach((child) => {
+//         child.addEventListener('mouseenter', () => {
+//             child.style.backgroundColor = child.style.backgroundColor;
+//             let val = child.style.filter = `brightness(100%)`;
+//             child.style.filter = `brightness(${val - 10}%)`;
+//         }
+//         )
+//     }
+//     )
+// };
 
 gradientBtn.addEventListener('click', gradientColor);
 
