@@ -50,6 +50,8 @@ colorBtn.addEventListener('click', changeColor);
 let eraseBtn = document.querySelector('.eraser');
 
 function eraseInner (event) {
+    brightVal = 110;
+    event.target.style.filter = `brightness(100%)`;
     event.target.style.backgroundColor = `white`;
 }
 
