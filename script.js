@@ -28,6 +28,8 @@ gridBtn.addEventListener('click', createGrid);
 let colorChoice = document.querySelector('#color-picker');
 
 function changeColorInner (event) {
+    brightVal = 110;
+    event.target.style.filter = `brightness(100%)`;
     event.target.style.backgroundColor = `${colorChoice.value}`
 }
 
