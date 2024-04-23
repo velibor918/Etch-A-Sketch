@@ -73,6 +73,8 @@ function clear() {
     let children = document.querySelectorAll('.square');
 
     children.forEach((child) => {
+        brightVal = 110;
+        child.style.filter = `brightness(100%)`;
         child.style.backgroundColor = `white`;
     });
 };
