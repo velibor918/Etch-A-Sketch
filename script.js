@@ -100,16 +100,22 @@ randomBtn.addEventListener('click', randomColor);
 
 let gradientBtn = document.querySelector('.gradient');
 
+let brightVal = 110;
+
 function gradientColorInner(event) {
-    let brightVal = window.getComputedStyle(event.target).getPropertyValue("filter:brightness()");
-    event.target.style.filter = `brightness(${brightVal - 10}%)`
+    
+    brightVal -= 10;
+    event.target.style.filter = `brightness(${brightVal}%)`;
 }
 
 function gradientColor () {
     let children = document.querySelectorAll('.square');
 
     children.forEach((child) => {
-   
+        child.removeEventListener('mouseenter', changeColorInner);
+        child.removeEventListener('mouseenter', randomColorInner);
+        child.removeEventListener('mouseenter', eraseInner);
+        child.addEventListener('mouseenter', gradientColorInner);
     }
     )
 };
