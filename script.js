@@ -88,6 +88,8 @@ clearBtn.addEventListener('click', clear);
 let randomBtn = document.querySelector('.random-color');
 
 function randomColorInner (event) {
+    brightVal = 110;
+    event.target.style.filter = `brightness(100%)`;
     event.target.style.backgroundColor = `rgb(${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)})`;
 };
 
